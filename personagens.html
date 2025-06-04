@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal dos Dobradores</title>
+    <link rel="stylesheet" href="css/style.css" /> <!--  Styles -->
+    <link rel="stylesheet" href="css/responsive.css" /> <!-- 🌊 Responsividade -->
+    <link rel="stylesheet" href="css/animations.css" /> <!-- 🌊 Animações -->
+    <link rel="stylesheet" href="css/personagens.css" /> <!-- 🌊 Estilo Específico para Personagens -->
+    <link rel="stylesheet" href="css/tema.css" /> <!-- 🌊 Tema -->
+    <link rel="icon" href="assets/imagens/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- 🌊 Navbar -->
+    <div id="navbar-container"></div>
+
+    <main>
+        <section class="characters-section fade-in delay-0">
+            <div class="personagens fade-in delay-0">
+                <h2>👥 Personagens</h2>
+                <p>Uma lista com os principais personagens do Universo Avatar</p>
+            </div>
+            <div class="character-container character-grid"></div>
+        </section>
+
+    </main>
+
+    <!-- 🌐 Rodapé -->
+    <footer class="footer fade-in delay-3">
+        <p>&copy; 2025 - Projeto Fã Não-Oficial de Avatar. Todos os direitos reservados aos criadores da obra original.
+        </p>
+    </footer>
+
+    <script src="js/tema.js"></script>
+    <script src="js/personagens.js"></script>
+    <script src="js/navbar-dropdown.js" defer></script>
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+                // Inicialize o tema após a navbar ser carregada
+                if (window.initThemeToggle) {
+                    window.initThemeToggle();
+                }
+            });
+    </script>
+</body>
+
+</html>l

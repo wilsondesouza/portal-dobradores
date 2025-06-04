@@ -1,0 +1,131 @@
+/* Description: Theme CSS file */
+
+/*****************************************
+Table Of Contents:
+- Themes (Light and Dark)
+******************************************/
+
+/* Theme Toggle Button */
+#theme-toggle-button {
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 3rem;
+	cursor: pointer;
+	display: flex;
+}
+
+#toggle {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked+svg #container {
+	fill: #2b4360;
+}
+
+#toggle:checked+svg #button {
+	transform: translate(28px, 2.333px);
+}
+
+#toggle:checked+svg #sun,
+#moon {
+	opacity: 0;
+}
+
+#toggle:checked+svg #moon,
+#sun {
+	opacity: 1;
+}
+
+#toggle:checked+svg #cloud,
+#stars {
+	opacity: 0;
+}
+
+#toggle:checked+svg #stars,
+#cloud {
+	opacity: 1;
+}
+
+/* Temas Claro e Escuro */
+
+/* Temas Claro e Escuro */
+
+:root {
+    --background-light: #e0e0e0;
+    --text-light: #24262a;
+    --background-dark: #24262a;
+    --text-dark: #e0e0e0;
+    --backgroundButton-light-hover: green;
+    --backgroundButton-dark-hover: #0d6efd;
+    --colorButton-light-hover: #24262a;
+    --colorButton-dark-hover: white;
+	--split-background-white: #ccc9c9;
+	--split-background-dark: #2e3033;
+	--theme-toggle-white: white;
+	--theme-toggle-dark: gold;
+	--navBarColor-dark: rgba(36, 38, 42, 0.9);
+	--navBarColor-light: rgba(255, 255, 255, 0.9);
+}
+
+/**************************/
+/*     General Styles     */
+/**************************/
+
+body {
+	background-color: var(--background-light);
+}
+
+
+html {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body,
+header,
+footer,
+section,
+.curiosidade,
+.curiosidades-container {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button,
+a,
+input {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.fade-theme {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-color);
+    z-index: 9999;
+    animation: fadeOut 0.5s forwards;
+    pointer-events: none;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

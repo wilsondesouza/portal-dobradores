@@ -1,0 +1,70 @@
+:root {
+    --fundo: #faf8f2;
+    --texto: #333;
+    --bordas: url('../assets/sprites/pergaminho-borda.svg');
+    /* SVG decorativo */
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+.teorias {
+    padding: 5rem 0 0 0;
+    color: var(--text-light)
+}
+
+section {
+    text-align: center;
+}
+
+.teorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.teoria-card {
+    background-color: #fff8e6;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 1px 6px 0 #0d6efd, 1px 1px 10px #0d6efd inset;
+    overflow: hidden;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.teoria-card.mostrar {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.teoria-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.teoria-conteudo {
+    padding: 1rem;
+}
+
+.teoria-conteudo h2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.teoria-conteudo p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .teoria-conteudo h2 {
+        font-size: 1rem;
+    }
+}

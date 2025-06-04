@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Portal dos Dobradores</title>
+	<link rel="stylesheet" href="css/style.css" /> <!--  Styles -->
+	<link rel="stylesheet" href="css/responsive.css" /> <!-- 🌊 Responsividade -->
+	<link rel="stylesheet" href="css/animations.css" /> <!-- 🌊 Animações -->
+	<link rel="stylesheet" href="css/tema.css" /> <!-- 🌊 Tema -->
+	<link rel="icon" href="assets/imagens/favicon.png" type="image/png">
+</head>
+
+<body>
+
+	<!-- 🌊 Navbar -->
+	<div id="navbar-container"></div>
+
+	<!-- 🌌 Seção Hero (Capa Principal) -->
+	<section class="hero fade-in delay-1">
+		<div class="hero-content">
+			<h1>Domine os Quatro Elementos</h1>
+			<p>Explore o universo de Avatar: A Lenda de Aang, descubra segredos, conheça os personagens e prove sua
+				maestria em um jogo exclusivo!</p>
+			<a href="chatIA.html" class="btn">Converse com a I.A</a>
+		</div>
+	</section>
+
+	<!-- 🌱 Seção Sobre -->
+	<section class="sobre fade-in delay-2">
+		<h2>O Que é Avatar?</h2>
+		<p>Avatar é a ponte entre os mundos. Nascido com a habilidade de dominar os quatro elementos, ele é responsável
+			por manter o equilíbrio entre as nações. Acompanhe a jornada de Aang e descubra os mistérios do seu legado.
+		</p>
+	</section>
+
+	<!-- 🌎 Seção Nações -->
+	<section class=" fade-in delay-3">
+		<div class="nacoes-footer">
+			<div class="container">
+				<div class="main">
+					<div class="up">
+						<button type="button" class="card1" id="btn-air" title="Air">
+							<img src="assets/icones/air2.png" alt="Air">
+						</button>
+
+						<button type="button" class="card2" id="btn-water" title="Water">
+							<img src="assets/icones/water2.png" alt="Water">
+						</button>
+					</div>
+					<div class="down">
+						<button type="button" class="card3" id="btn-earth" title="Earth">
+							<img src="assets/icones/earth2.png" alt="Earth">
+						</button>
+
+						<button type="button" class="card4" id="btn-fire" title="Fire">
+							<img src="assets/icones/fire2.png" alt="Fire">
+						</button>
+					</div>
+				</div>
+			</div> <!-- end of container -->
+		</div>
+	</section>
+
+	<!-- Modais -->
+	<div class="modal" id="modal-air">
+		<div class="modal-content">
+			<h2>Nômades do Ar<img src="assets/icones/air2.png" alt="Air"></h2>
+			<h3>Liberdade. Espiritualidade. Paz.</h3>
+			<blockquote>Vivendo entre os céus e os templos sagrados, os Nômades do Ar cultivam a leveza do corpo e do
+				espírito.
+				Seus dobradores são mestres da evasão e do equilíbrio, guiados por ensinamentos antigos e por uma vida
+				de desapego</blockquote>
+			<button class="button" id="fechar-modal-air">
+				<svg fill="#000000" height="20px" width="20px" viewBox="0 0 460.775 460.775">
+					<path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z" />
+				</svg>
+				<div class="text">
+					Fechar
+				</div>
+			</button>
+		</div>
+	</div>
+	<div class="modal" id="modal-water">
+		<div class="modal-content">
+			<h2>Tribo da Água<img src="assets/icones/water2.png" alt="Water"></h2>
+			<h3>Adaptação. Harmonia. Esperança.</h3>
+			<blockquote>Divididas entre o Norte e o Sul, as Tribos da Água prosperam com união e resiliência. Guiadas
+				pela lua e pela tradição, seus dobradores curam,
+				protegem e enfrentam as marés da vida com compaixão e coragem. A água flui, e com ela, a força de um
+				povo.</blockquote>
+			<button class="button" id="fechar-modal-water">
+				<svg fill="#000000" height="20px" width="20px" viewBox="0 0 460.775 460.775">
+					<path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z" />
+				</svg>
+				<div class="text">
+					Fechar
+				</div>
+			</button>
+		</div>
+	</div>
+	<div class="modal" id="modal-earth">
+		<div class="modal-content">
+			<h2>Reino da Terra<img src="assets/icones/earth2.png" alt="Earth"></h2>
+			<h3>Resistência. Estabilidade. Determinação.</h3>
+			<blockquote>O vasto Reino da Terra é formado por cidades e culturas diversas, unidas por um povo firme como
+				a rocha. Seus dobradores são inabaláveis e precisos,
+				capazes de dominar até o próprio metal. A força do Reino está na sua perseverança.</blockquote>
+			<button class="button" id="fechar-modal-earth">
+				<svg fill="#000000" height="20px" width="20px" viewBox="0 0 460.775 460.775">
+					<path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z" />
+				</svg>
+				<div class="text">
+					Fechar
+				</div>
+			</button>
+		</div>
+	</div>
+	<div class="modal" id="modal-fire">
+		<div class="modal-content">
+			<h2>Nação do Fogo<img src="assets/icones/fire2.png" alt="Fire"></h2>
+			<h3>Ambição. Honra. Força.</h3>
+			<blockquote>A Nação do Fogo é movida pela energia do sol e impulsionada por sua paixão ardente. Seus
+				dobradores manipulam as chamas com poder e disciplina.
+				Apesar de seu passado marcado por guerra e conquistas, há nobreza e sabedoria em seus verdadeiros
+				mestres</blockquote>
+			<button class="button" id="fechar-modal-fire">
+				<svg fill="#000000" height="20px" width="20px" viewBox="0 0 460.775 460.775">
+					<path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+	c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+	c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+	c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+	l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+	c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z" />
+				</svg>
+				<div class="text">
+					Fechar
+				</div>
+			</button>
+		</div>
+	</div>
+
+	<!-- 🌐 Rodapé -->
+	<footer class="footer fade-in delay-3">
+		<p>&copy; 2025 - Projeto Fã Não-Oficial de Avatar. Todos os direitos reservados aos criadores da obra original.
+		</p>
+	</footer>
+
+	<script src="js/tema.js"></script>
+	<script src="js/modais.js"></script>
+	<script src="js/navbar-dropdown.js" defer></script>
+	<script>
+		fetch('navbar.html')
+			.then(res => res.text())
+			.then(html => {
+				document.getElementById('navbar-container').innerHTML = html;
+				// Inicialize o tema após a navbar ser carregada
+				if (window.initThemeToggle) {
+					window.initThemeToggle();
+				}
+			});
+	</script>
+</body>
+
+</html>

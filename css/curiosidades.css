@@ -1,0 +1,59 @@
+/* Description: Curiosidades CSS file */
+
+/*****************************************
+Table Of Contents:
+-Body
+-Section
+-Curiosidades Container
+*****************************************/
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.curiosidades {
+    padding: 5rem 0 0 0;
+}
+
+section {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.curiosidades-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.curiosidades h1, .curiosidades p {
+    color: var(--text-light)
+}
+
+.curiosidade {
+    background-color: var(--background-dark);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 6px 0 #0d6efd, 1px 1px 10px #0d6efd inset;
+    transition: transform 0.3s ease;
+}
+
+.curiosidade:hover {
+    transform: translateY(-5px);
+}
+
+.curiosidade h2 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.curiosidade p  {
+    color: var(--text-dark);
+}

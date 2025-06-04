@@ -1,0 +1,39 @@
+/* Description: ChatBot CSS file */
+
+/*****************************************
+Table Of Contents:
+- Chatbot Container
+*****************************************/
+
+.chat-com-ia {
+    padding: 5rem 0 0 0;
+
+    color: var(--text-light)
+}
+
+.chat-com-ia h2 {
+    text-align: center;
+}
+
+.chatbot-container {
+    margin: 2rem 0rem 0;
+    background-color: var(--background-dark);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 6px 0 #0d6efd, 1px 1px 10px #0d6efd inset;
+    max-height: 45rem;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.chatbot-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot-container::-webkit-scrollbar-thumb {
+    background-color: #826644;
+    /* tom de chá/jasmim */
+    border-radius: 10px;
+}

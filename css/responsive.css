@@ -1,0 +1,177 @@
+/* Description: Responsive CSS file */
+
+/*****************************************
+Table Of Contents:
+-Responsive Design
+*****************************************/
+
+/* Responsivo NavBar*/
+
+/* Botão hamburguer  */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle .bar {
+    width: 28px;
+    height: 4px;
+    background: var(--text-light, #24262a);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile: esconde menu e mostra hamburguer */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        /* ajuste conforme altura da navbar */
+        right: 0;
+        background: var(--background-light, #fff);
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        display: none;
+        z-index: 9;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+        text-align: right;
+        padding: 0 1.5rem;
+    }
+}
+
+/* Responsivo HomePage*/
+@media (max-width: 768px) {
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .sobre h2 {
+        font-size: 1.6rem;
+    }
+
+    .sobre p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsivo Curiosidades*/
+@media (max-width: 768px) {
+
+    .curiosidades,
+    .timelines,
+    .teorias {
+        padding: 8rem 0 0 0 !important;
+    }
+}
+
+/* Responsivo Timeline*/
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-event {
+        width: 100%;
+        padding-left: 2.5rem;
+        text-align: left !important;
+    }
+
+    .timeline-event.left,
+    .timeline-event.right {
+        left: 0;
+    }
+
+    .timeline-event::before {
+        left: 0;
+    }
+}
+
+/* Responsivo Personagens*/
+@media (max-width: 600px) {
+    .character-card {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        position: relative !important;
+        bottom: -3% !important
+    }
+}
+
+/* Responsivo ChatBot*/
+@media (min-width: 1024px) {
+    .chatbot-container {
+        margin: 2rem 10rem 0 !important
+    }
+}

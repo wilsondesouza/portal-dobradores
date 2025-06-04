@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal dos Dobradores</title>
+    <link rel="stylesheet" href="css/style.css" /> <!--  Styles -->
+    <link rel="stylesheet" href="css/responsive.css" /> <!-- 🌊 Responsividade -->
+    <link rel="stylesheet" href="css/animations.css" /> <!-- 🌊 Animações -->
+    <link rel="stylesheet" href="css/curiosidades.css" /> <!-- 🌊 Estilo Específico para Curiosidades -->
+    <link rel="stylesheet" href="css/tema.css" /> <!-- 🌊 Tema -->
+    <link rel="icon" href="assets/imagens/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- 🌊 Navbar -->
+    <div id="navbar-container"></div>
+
+
+    <section class="curiosidades fade-in delay-1">
+        <h1>Curiosidades do Universo Avatar</h1>
+        <p>Descubra fatos, histórias ocultas e teorias do mundo de Aang e seus amigos.</p>
+    </section>
+
+    <main class="curiosidades-container fade-in delay-2">
+        <section class="curiosidade">
+            <h2>🥋 Artes Marciais e Dobra</h2>
+            <p>Sabia que cada tipo de dobra foi inspirado em uma arte marcial real? A dobra da água, por exemplo, foi
+                baseada no Tai Chi, enquanto a dobra de terra se inspira no Hung Gar.
+                Já a dobora de ar foi inspirada no Baguazhang,
+                e por fim a dobra de fogo se inspirou no estilo Kung Fu Shaolin do Norte</p>
+        </section>
+
+        <section class="curiosidade">
+            <h2>🧠 Idades dos Avatares</h2>
+            <p>Kuruk teve uma vida curta: apenas 33 anos. Já Kyoshi foi o ponto fora da curva, tendo vivido 230 anos.
+                Roku por sua vez teve sua vida antecipada na batalha contra o vulcão, tendo morrido aos 70 anos.
+                E Aang, considerando os 100 anos que passou congelado, viveu por 166 anos.</p>
+        </section>
+
+        <section class="curiosidade">
+            <h2>📜 A História Antes de Aang</h2>
+            <p>Muitos não lembram, mas houve Avatares que enfrentaram grandes crises, como Kuruk, que caçou um
+                espírito das trevas por décadas, ou Kyoshi que enfrenteu um pequeno tirano no Reino da Terra</p>
+        </section>
+
+        <!-- Você pode adicionar mais blocos aqui -->
+    </main>
+
+    <!-- 🌐 Rodapé -->
+    <footer class="footer fade-in delay-3">
+        <p>&copy; 2025 - Projeto Fã Não-Oficial de Avatar. Todos os direitos reservados aos criadores da obra original.
+        </p>
+    </footer>
+
+    <script src="js/tema.js"></script>
+    <script src="js/navbar-dropdown.js" defer></script>
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+                // Inicialize o tema após a navbar ser carregada
+                if (window.initThemeToggle) {
+                    window.initThemeToggle();
+                }
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/* quiz.css */
+h2, p {
+    color: var(--text-light);
+}
+
+.quiz {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: "Papyrus", sans-serif;
+}
+
+.quiz button{
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: #ffcc00;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 1rem 0 0 0;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+.answer-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .answer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo tipo pergaminho */
+#question-screen,
+#result-screen {
+    background: #fdf3d3;
+    border: 6px solid #a67c52;
+    padding: 2rem;
+    border-radius: 12px;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
