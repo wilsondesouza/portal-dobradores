@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Website ATLA A lenda de Aang">
+	<meta name="author" content="Wilson Souza">
+	<meta name="keywords" content="Avatar, Aang, Dobradores, Elementos, Portal dos Dobradores, Fã Não-Oficial">
+
+	<!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="wilsondesouza • portal-dobradores" /> <!-- website name -->
+	<meta property="og:site" content="https://portal-dobradores.vercel.app/" /> <!-- website link -->
+	<meta property=”og:type” content=”website“ /> <!--  describes the type of content -->
+	<meta property="og:title" content="Portal dos Dobradores • Wilson Souza" /><!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Bem vindo ao Portal dos Dobradores. Aqui você poderá ler e ouvir as falas mais icônicas dos principais personagens, ler e submeter sua própria fanfic e ter uma conversa com o Tio Iroh" /><!-- description shown in the actual shared post -->
+	<meta property="og:image" content="https://i.postimg.cc/kGMhLX86/homepage.png" /><!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="https://wilsondesouza.github.io/portal-dobradores/" /><!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="https://i.postimg.cc/kGMhLX86/homepage.png"><!-- to have large image post format in Twitter -->
+
+  <title>Portal dos Dobradores</title>
+  <link rel="stylesheet" href="css/style.css" /> <!--  Styles -->
+  <link rel="stylesheet" href="css/responsive.css" /> <!-- 🌊 Responsividade -->
+  <link rel="stylesheet" href="css/animations.css" /> <!-- 🌊 Animações -->
+  <link rel="stylesheet" href="css/fanfics.css" /> <!-- 🌊 Estilo Específico para Fanfics -->
+  <link rel="stylesheet" href="css/tema.css" /> <!-- 🌊 Tema -->
+	<link rel="icon" href="assets/imagens/favicon.ico" type="image/png">
+</head>
+
+<body>
+
+  <!-- 🌊 Navbar -->
+  <div id="navbar-container"></div>
+
+
+  <section class="fanfics fade-in delay-1">
+    <h1>Fanfics sobre Universo Avatar</h1>
+    <p>Leia as estórias criadas pelos fãs do Universo Avatar.</p>
+  </section>
+
+
+  <div class="fanfics-container fade-in delay-2" id="fanfics-container"></div>
+
+  <!-- Modal de leitura -->
+  <div class="modal hidden" id="fanfic-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="fecharModal()">✖</span>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-texto"></p>
+    </div>
+  </div>
+
+
+  <!-- Botão para abrir o modal -->
+  <button onclick="abrirModal()" class="abrir-modal-btn fade-in delay-3">📝</button>
+
+  <!-- Modal Formulário -->
+  <div id="fanficModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="fecharModal()">✖</span>
+      <h2>📜 Submeta sua Fanfic</h2>
+
+      <input id="titulo" type="text" placeholder="Título da Fanfic" />
+      <input id="autor" type="text" placeholder="Seu nickname" />
+      <textarea id="sinopse" placeholder="Sinopse curta..."></textarea>
+      <textarea id="texto" placeholder="Texto completo da fanfic"></textarea>
+
+      <button onclick="enviarFanfic()" class="enviar-btn">📨 Enviar Fanfic</button>
+    </div>
+  </div>
+
+  <!-- 🌐 Rodapé -->
+  <footer class="footer fade-in delay-3">
+    <p>&copy; 2025 - Projeto Fã Não-Oficial de Avatar. Todos os direitos reservados aos criadores da obra original.
+    </p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore-compat.js"></script>
+
+  <script src="js/fanfics.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/navbar-dropdown.js" defer></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+        // Inicialize o tema após a navbar ser carregada
+        if (window.initThemeToggle) {
+          window.initThemeToggle();
+        }
+      });
+  </script>
+</body>
+
+</html>

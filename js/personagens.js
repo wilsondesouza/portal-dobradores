@@ -12,14 +12,13 @@ const personagens = [
     },
     {
         nome: "Tio Iroh",
-        role: "General aposentado e Dominador da Nação do Fogo",
         curiosidade: "Grande amante de chá e mestre da sabedoria. Pai adotivo de Zuko.",
         audio: "../assets/sons/iroh.mp3"
     },
     {
         nome: "Katara",
         curiosidade: "A última dominadora de água do Sul.",
-        fala: "O senhor não me dirruba"
+        audio: "../assets/sons/katara.mp3"
     },
     {
         nome: "Toph",
@@ -29,12 +28,12 @@ const personagens = [
     {
         nome: "Azula",
         curiosidade: "Prodígio da dominação de fogo e princesa da Nação do Fogo.",
-        fala: "",
+        audio: "../assets/sons/azula.mp3"
     },
     {
         nome: "Sokka",
         curiosidade: "Apesar de não ser dobrador, é um excelente estrategista.",
-        fala: "Eu sou só um cara com um bumerangue, e isso é o suficiente!"
+        audio: "../assets/sons/sokka.mp3"
     }
 ];
 

@@ -1,0 +1,233 @@
+/* Description: Fanfics CSS file */
+
+/*****************************************
+Table Of Contents:
+-Fanfic Container
+-Like Button
+-Modal Container
+-Modal Content
+*****************************************/
+
+.fanfics {
+    padding: 5rem 0 0 0;
+    text-align: center;
+}
+
+.fanfics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.fanfic-card {
+    background-color: #fef5e7;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fanfic-card:hover {
+    transform: scale(1.03);
+}
+
+.fanfic-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.fanfic-card .autor {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.fanfic-card .sinopse {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Fanfic Modal (Ler Histórias) */
+#fanfic-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#fanfic-modal .modal-content {
+    background: var(--background-dark);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    color: var(--text-dark);
+}
+
+#fanfic-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.likes-area {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+}
+
+
+
+.like-btn {
+    background-color: #3B81F6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.like-count {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Botão de abrir modal */
+.abrir-modal-btn {
+    position: fixed;
+    bottom: 110px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3B81F6;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+/* Hover: levanta e brilha */
+.abrir-modal-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #295fcc;
+}
+
+/* Clique: pequeno "soco" */
+.abrir-modal-btn:active {
+    transform: scale(0.9);
+    background-color: #1c49a2;
+}
+
+
+/* Fanfic Modal (Enviar Formulário) Content */
+
+#fanficModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#fanficModal .modal-content {
+    background: var(--background-light);
+    padding: 2rem;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 6px 0 #0d6efd, 1px 1px 10px #0d6efd inset;
+    color: var(--text-light);
+    font-family: 'Georgia', serif;
+}
+
+#fanficModal .modal-content input,
+#fanficModal .modal-content textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #d8c7a0;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 240, 0.95);
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+}
+
+#fanficModal .modal-content #texto {
+    max-height: 45rem;
+    overflow-y: auto;
+}
+
+/* Botão de envio */
+#fanficModal .enviar-btn {
+    background-color: #d6a04f;
+    color: white;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#fanficModal .enviar-btn:hover {
+    background-color: #b48132;
+}
+
+#fanficModal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 🌐 Rodapé */
+footer {
+    position: absolute !important;
+    width: 100%;
+    bottom: 0% !important;
+}

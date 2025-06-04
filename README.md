@@ -37,6 +37,7 @@ Este projeto é um site interativo e responsivo dedicado ao universo de Avatar, 
 ├── curiosidades.html          # Curiosidades da obra
 ├── linha-do-tempo.html        # Linha do tempo interativa
 ├── teorias.html               # Teorias e conspirações
+├── fanfics.html               # Estórias criadas por fãs.
 ├── quiz.html                  # Quiz: Que tipo de dobrador você seria?
 ├── personagens.html           # Ficha dos personagens
 ├── chatIA.html                # Chatbot com personalidade do Tio Iroh
@@ -45,7 +46,8 @@ Este projeto é um site interativo e responsivo dedicado ao universo de Avatar, 
 │   ├── style.css
 │   ├── animations.css
 │   ├── chatIA.css
-│   ├── curiosidades.css
+│   ├── curiosidades.
+│   ├── fanfics.css
 │   ├── personagens.css
 │   ├── quiz.css
 │   ├── responsive.css
@@ -53,6 +55,7 @@ Este projeto é um site interativo e responsivo dedicado ao universo de Avatar, 
 │   ├── teorias.css
 │   └── timeline.css
 ├── js/
+│   ├── fanfics.js
 │   ├── modais.js
 │   ├── navbar-dropdown.js
 │   ├── personagens.js
@@ -141,9 +144,8 @@ Siga os passos abaixo para colaborar:
 ---
 
 ## 💡 Ideias Futuras
-
-- Submissão e curadoria de fanarts/fanfics
-- Sistema de comentários e votos
+- Submissão e curadoria de fanarts/fanfics (parcialmente implementado - fanfics ✔️)
+- Sistema de comentários e votos (parcialmente implementado - votos ✔️)
 - Novos mini-jogos e desafios
 - Mais customização no chatbot
 

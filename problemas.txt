@@ -1,1 +1,0 @@
-resolver responsividade na barra de navegação e quiz para mobile
